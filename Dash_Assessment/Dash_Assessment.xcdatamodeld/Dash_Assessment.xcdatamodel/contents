@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21512" systemVersion="22A400" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="LMedia" representedClassName="LMedia" syncable="YES">
+        <attribute name="id" attributeType="String" defaultValueString=""/>
+        <attribute name="url" attributeType="String" defaultValueString=""/>
+    </entity>
+    <entity name="LNews" representedClassName="LNews" syncable="YES">
+        <attribute name="details" attributeType="String" defaultValueString=""/>
+        <attribute name="id" attributeType="String" defaultValueString=""/>
+        <attribute name="location" attributeType="String" defaultValueString=""/>
+        <attribute name="title" attributeType="String" defaultValueString=""/>
+        <relationship name="multiMedia" transient="YES" toMany="YES" deletionRule="No Action" destinationEntity="LMedia"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LUser"/>
+    </entity>
+    <entity name="LTourist" representedClassName="LTourist" syncable="YES">
+        <attribute name="id" attributeType="String" defaultValueString=""/>
+        <attribute name="touristLocation" attributeType="String" defaultValueString=""/>
+        <attribute name="touristName" attributeType="String" defaultValueString=""/>
+        <attribute name="touristProfilepicture" attributeType="String" defaultValueString=""/>
+    </entity>
+    <entity name="LUser" representedClassName="LUser" syncable="YES">
+        <attribute name="id" attributeType="String" defaultValueString=""/>
+        <attribute name="name" attributeType="String" defaultValueString=""/>
+        <attribute name="picture" attributeType="String" defaultValueString=""/>
+    </entity>
+</model>
